@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Lichess Analyzer",
+    "version": "0.0.1",
+    "description": "",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "scripting"
+    ],
+    "host_permissions": [
+        "https://arslanovchess.com/game-analysis"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://lichess.org/*/*"],
+        "js": ["script.js"]
+      }
+    ]
+  }
+  
